@@ -1,0 +1,29 @@
+
+class Dimensions{
+	
+	int l , b;
+	Dimension(){
+		l,b = 0
+	}
+	Dimension(int l , int b){
+		
+	}
+	Dimension(int s){
+		l , b= s
+	}
+	void display(){
+		print 
+		l = 10
+		b = 5
+	}
+	
+}
+
+public class ShowDimention {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

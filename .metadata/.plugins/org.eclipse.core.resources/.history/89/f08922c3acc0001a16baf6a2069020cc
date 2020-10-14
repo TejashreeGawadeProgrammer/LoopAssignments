@@ -1,0 +1,56 @@
+
+class Dimensions{
+	
+	protected int l , b;
+	Dimensions(){
+		l = 0;
+		b=0;
+	}
+	Dimensions(int l , int b){
+		this.l = l;
+		this.b = b;
+		
+	}
+	Dimensions(int s){
+		this.l = s;
+		this.b = s;
+		
+	}
+	void display(){
+		System.out.println("Length is:"+l);
+		System.out.println("Breath is:"+b);
+		}
+	
+}
+
+class Area extends Dimensions{
+	protected int a;
+	
+	Area(int l, int b ){
+		super(l,b);
+		
+	}
+	void calculateArea(){
+		 a = l*b;
+	}
+	//override
+	void display(){
+		super(display);
+		System.out.println("Area Is:"+a);
+	}
+	
+}
+
+public class ShowDimention {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Dimensions d1 = new Dimensions(10, 5);
+		Area a1 = new Area(10,5);
+		a1.display();
+		Dimensions d2 = new Dimensions(20);
+		d2.display();
+		
+	}
+
+}

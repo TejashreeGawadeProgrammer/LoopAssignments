@@ -1,0 +1,26 @@
+!SESSION 2020-07-07 16:25:20.333 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_222
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.net 1 0 2020-07-07 16:26:11.877
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-07-07 16:26:11.988
+!MESSAGE Using Apache MINA sshd as ssh client.
+!SESSION 2020-07-07 16:28:47.394 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_222
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Users/nil/Documents/teju /Personel/Training Material/Java/Assignments/Core Java Assignments/loopAssighnments -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.net 1 0 2020-07-07 16:28:51.261
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-07-07 16:28:51.293
+!MESSAGE Using Apache MINA sshd as ssh client.

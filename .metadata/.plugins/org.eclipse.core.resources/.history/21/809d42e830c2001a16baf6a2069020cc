@@ -1,0 +1,108 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+class RationalNumber{
+	protected int num,den;
+	
+	public RationalNumber() {
+		this.num = 0;
+		this.den = 1;
+	}
+    
+    public RationalNumber(int num, int den)
+    {
+        this.num = num;		
+        this.den = den;		
+    }
+
+   
+
+	public String toString()
+    {
+        return "(" + this.num + "/" + this.den + ")";
+    }
+    
+    public RationalNumber add(RationalNumber rno1)
+    {
+    	RationalNumber result = new RationalNumber();
+        result.num = this.num * rno1.den + rno1.num * this.den;
+    	result.den = this.den * rno1.den;
+        return result;
+    }
+    public RationalNumber sub(RationalNumber rno1)
+    {
+    	RationalNumber result = new RationalNumber();
+        result.num = this.num * rno1.den - rno1.num * this.den;
+        result.den = this.den * rno1.den;
+        return result;
+    }
+    public RationalNumber mul(RationalNumber rno1)
+    {
+    	RationalNumber result = new RationalNumber();
+    	result.num = this.num * rno1.num ;
+        result.den = this.den * rno1.den;
+        return result;
+    }
+    public RationalNumber div(RationalNumber rno1)
+    {
+    	RationalNumber result = new RationalNumber();
+    	result.num = this.num * rno1.den ;
+        result.den = this.den * rno1.num;
+        return result;
+    }
+	
+}
+
+public class RationalDemo {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO Auto-generated method stub
+		
+		RationalNumber n1, n2, res;
+		n1 = new RationalNumber(3,4);
+        n2 = new RationalNumber(2,5);
+        do {
+        BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
+	    System.out.println("Rational Number Operation: ");
+	    System.out.println("1			:			Addition ");
+	    System.out.println("2			:			Subtraction ");
+	    System.out.println("3			:			Multiplication ");
+	    System.out.println("4			:			Division ");
+	    System.out.println("5			:			Simplify ");
+	    System.out.println("6			:			HashCodeEquality ");
+	    System.out.println("7			:			Exit ");
+	    System.out.println("Your Choice: ");
+	    int choice = Integer.parseInt(reader.readLine());
+	    
+	    switch (choice) {
+	    case 1:		 res = n1.add(n2);
+        			 System.out.println("Addition Is :"+n1+" + "+n2+" = "+res);
+        			 break;
+	    
+	    case 2:		 res = n1.sub(n2);
+	    			 System.out.println("Subtraction Is :"+n1+" - "+n2+" = "+res);	
+	      
+	    			 break;
+	    			 
+	    case 3:		 res = n1.mul(n2);
+		 			 System.out.println("Multiplication Is :"+n1+" * "+n2+" = "+res);	
+
+		 			 break;
+	    case 4:		 res = n1.div(n2);
+		 			 System.out.println("Multiplication Is :"+n1+" / "+n2+" = "+res);	
+
+		             break;
+	    case 5:		 res = n1.div(n2);
+		 			 System.out.println("Multiplication Is :"+n1+" / "+n2+" = "+res);	
+
+		 			 break;
+	    case 6:		 
+		 			 break;
+	    default: 	 System.exit(0);
+	    			 break;
+	  }
+      }while(choice!=0);
+	}
+
+}

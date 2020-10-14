@@ -1,0 +1,107 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+class RationalNumber{
+	protected int num,den;
+	
+	public RationalNumber() {
+		this.num = 1;
+		this.den = 1;
+	}
+    
+    public RationalNumber(int num, int den)
+    {
+        this.num = num;		
+        this.den = den;		
+    }
+
+    public String toString()
+    {
+        return "(" + num + "/" + den + ")";
+    }
+    
+    public int getNumerator() {
+    	return this.num;
+    }
+    public int getDenominator() {
+    	return this.den;
+    }
+    
+    public RationalNumber add(RationalNumber rno1)
+    {
+    	RationalNumber result = new RationalNumber(0,0);
+        result.num = num * rno1.den + rno1.num * den;
+        result.den = den * rno1.den;
+        return result;
+    }
+    public RationalNumber sub(RationalNumber rno1)
+    {
+    	RationalNumber result = new RationalNumber(0,0);
+        result.num = num * rno1.den - rno1.num * den;
+        result.den = den * rno1.den;
+        return result;
+    }
+    public RationalNumber mul(RationalNumber rno1)
+    {
+    	RationalNumber result = new RationalNumber(0,0);
+    	result.num = num * rno1.num ;
+        result.den = den * rno1.den;
+        return result;
+    }
+    public RationalNumber div(RationalNumber rno1)
+    {
+    	RationalNumber result = new RationalNumber(0,0);
+        result.num = num * rno1.den / rno1.num * den;
+        result.den = den * rno1.den;
+        return result;
+    }
+	
+}
+
+public class RationalDemo {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO Auto-generated method stub
+		
+		RationalNumber n1, n2, res;
+		n1 = new RationalNumber(3,4);
+        n2 = new RationalNumber(2,5);
+        
+        BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
+	    System.out.println("Rational Number Operation: ");
+	    System.out.println("1			:			Addition ");
+	    System.out.println("2			:			Subtraction ");
+	    System.out.println("3			:			Multiplication ");
+	    System.out.println("4			:			Division ");
+	    System.out.println("5			:			Simplify ");
+	    System.out.println("6			:			Equality ");
+	    System.out.println("7			:			Exit ");
+	    System.out.println("Your Choice: ");
+	    int choice = Integer.parseInt(reader.readLine());
+	    
+	    switch (choice) {
+	    case 1:		 res = n1.add(n2);
+	    			 System.out.println("Numerator"+n1.getNumerator());
+	    			 System.out.println("Denominator"+n1.getDenominator());
+	    			 
+	    			 System.out.println("Numerator"+n2.getNumerator());
+	    			 System.out.println("Denominator"+n2.getDenominator());
+	    			 
+        			 System.out.println("Addition Is :"+n1+" + "+n2+" = "+res);
+        			 break;
+	    
+	    case 2:		 res = n1.sub(n2);
+	    			 System.out.println("Subtraction Is :"+n1+" - "+n2+" = "+res);	
+	      
+	    			 break;
+	    			 
+	    case 3:		 res = n1.mul(n2);
+		 			 System.out.println("Multiplication Is :"+n1+" - "+n2+" = "+res);	
+
+		 			 break;
+	    default: System.exit(0);
+	  }
+	}
+
+}

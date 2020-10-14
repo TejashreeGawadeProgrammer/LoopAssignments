@@ -1,0 +1,39 @@
+
+class Dimensions{
+	
+	protected int l , b;
+	Dimensions(){
+		l = 0;
+		b=0;
+	}
+	Dimensions(int l , int b){
+		this.l = l;
+		this.b = b;
+		
+	}
+	Dimensions(int s){
+		this.l = s;
+		this.b = s;
+		
+	}
+	void display(){
+		System.out.println("Length is:"+l);
+		System.out.println("Breath is:"+b);
+		}
+	
+}
+
+//class Area extends Dimensions{
+//	
+//}
+
+public class ShowDimention {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Dimensions d1 = new Dimensions(10, 5);
+		d1.display();
+		
+	}
+
+}
